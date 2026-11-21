@@ -1,0 +1,10 @@
+alias: Foto-Upload – neue Dateien melden
+triggers:
+  - trigger: event
+    event_type: foto_upload_new_files
+actions:
+  - action: notify.notify
+    data:
+      title: Foto-Upload
+      message: "{{ trigger.event.data.count }} neue Datei(en), insgesamt {{ trigger.event.data.total }}."
+mode: queued

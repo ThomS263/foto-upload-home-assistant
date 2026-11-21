@@ -17,7 +17,7 @@ Danach **Foto-Upload** installieren, starten und die Weboberfläche öffnen. Die
 
 In HACS dieses Repository als benutzerdefiniertes Repository vom Typ **Integration** hinzufügen. Home Assistant neu starten und anschließend unter **Geräte & Dienste → Integration hinzufügen → Foto-Upload** die Serveradresse eintragen.
 
-Die Integration erstellt Sensoren für Erreichbarkeit, Serverversion, Gesamtzahl der Dateien und jedes aktive Album. Mit Home-Assistant-Automationen lassen sich bei steigenden Dateizahlen Benachrichtigungen senden.
+Die Integration erstellt Sensoren für Erreichbarkeit, Serverversion, Gesamtzahl der Dateien und jedes aktive Album. Neue Alben erscheinen dynamisch. Bei neuen Dateien wird außerdem das Ereignis `foto_upload_new_files` mit `count`, `total` und `entry_id` ausgelöst. Über die Geräteansicht führt ein Link direkt zur Serveroberfläche; Diagnoseinformationen stehen im Home-Assistant-Download bereit.
 
 ## Beispielautomation für neue Uploads
 
@@ -25,15 +25,16 @@ Die Integration erstellt Sensoren für Erreichbarkeit, Serverversion, Gesamtzahl
 automation:
   - alias: Foto-Upload hat neue Dateien
     triggers:
-      - trigger: state
-        entity_id: sensor.foto_upload_dateien_gesamt
-    conditions:
-      - condition: template
-        value_template: "{{ trigger.to_state.state | int > trigger.from_state.state | int }}"
+      - trigger: event
+        event_type: foto_upload_new_files
     actions:
       - action: notify.notify
         data:
-          message: "Neue Fotos wurden hochgeladen."
+          message: "{{ trigger.event.data.count }} neue Datei(en) wurden hochgeladen."
 ```
 
 [Foto-Upload-Server](https://github.com/ThomS263/foto_upload_offiziel) · [Android-App](https://github.com/ThomS263/foto_upload_offiziell_androidapp)
+
+Ausführliche Wiki-Dokumentation für die private Testphase liegt unter [`docs/`](docs/Home.md). GitHub stellt ein echtes Wiki für dieses private Repository derzeit nicht als klonbares Wiki-Repository bereit; die Seiten sind deshalb versioniert und werden bei einer späteren Veröffentlichung ohne Inhaltsverlust übernommen.
+
+Solange dieses Repository privat ist, muss es für Tests lokal in `/config/custom_components/foto_upload` kopiert werden; HACS und der Add-on-Store können private GitHub-Repositories nicht allgemein abrufen. Die Container- und Hassfest-Prüfungen laufen trotzdem. Erst nach deiner bewussten Veröffentlichung wird zusätzlich die offizielle HACS-Prüfung aktiv.
