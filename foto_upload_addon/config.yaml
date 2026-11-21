@@ -1,0 +1,24 @@
+name: Foto-Upload
+version: "3.2.0"
+slug: foto_upload
+description: Private Foto- und Videoalben direkt auf Home Assistant betreiben
+url: https://github.com/ThomS263/foto_upload_offiziell_hacs
+arch: [amd64, aarch64]
+startup: services
+boot: auto
+init: false
+ingress: true
+ingress_port: 8080
+webui: http://[HOST]:[PORT:8080]
+ports:
+  8080/tcp: 8080
+ports_description:
+  8080/tcp: Foto-Upload Weboberfläche
+map:
+  - share:rw
+options:
+  admin_password: ""
+  public_url: ""
+schema:
+  admin_password: password?
+  public_url: url?

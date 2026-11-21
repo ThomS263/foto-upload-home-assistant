@@ -1,0 +1,9 @@
+{
+  "domain": "foto_upload",
+  "name": "Foto-Upload",
+  "codeowners": ["@ThomS263"],
+  "config_flow": true,
+  "documentation": "https://github.com/ThomS263/foto_upload_offiziell_hacs",
+  "iot_class": "local_polling",
+  "version": "1.0.0"
+}

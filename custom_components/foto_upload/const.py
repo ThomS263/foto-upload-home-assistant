@@ -1,0 +1,3 @@
+DOMAIN = "foto_upload"
+CONF_URL = "url"
+SCAN_INTERVAL_SECONDS = 60
