@@ -17,7 +17,7 @@ Danach **Foto-Upload** installieren, starten und die Weboberfläche öffnen. Die
 
 In HACS dieses Repository als benutzerdefiniertes Repository vom Typ **Integration** hinzufügen. Home Assistant neu starten und anschließend unter **Geräte & Dienste → Integration hinzufügen → Foto-Upload** die Serveradresse eintragen.
 
-Die Integration erstellt Sensoren für Erreichbarkeit, Serverversion, Gesamtzahl der Dateien und jedes aktive Album. Neue Alben erscheinen dynamisch. Bei neuen Dateien wird außerdem das Ereignis `foto_upload_new_files` mit `count`, `total` und `entry_id` ausgelöst. Über die Geräteansicht führt ein Link direkt zur Serveroberfläche; Diagnoseinformationen stehen im Home-Assistant-Download bereit.
+Die Integration erstellt Sensoren für Erreichbarkeit, Version, Dateien, aktive und archivierte Alben, freien Speicher, letzten Upload, letzte Sicherung, Sicherungszustand und abgelaufene Gästelinks. Neue Alben erscheinen dynamisch. Bei neuen Dateien wird außerdem das Ereignis `foto_upload_new_files` mit `count`, `total` und `entry_id` ausgelöst. Über die Geräteansicht führt ein Link direkt zur Serveroberfläche; Diagnoseinformationen stehen im Home-Assistant-Download bereit.
 
 ## Beispielautomation für neue Uploads
 
