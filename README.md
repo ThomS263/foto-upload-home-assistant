@@ -37,4 +37,8 @@ automation:
 
 Ausführliche Wiki-Dokumentation für die private Testphase liegt unter [`docs/`](docs/Home.md). GitHub stellt ein echtes Wiki für dieses private Repository derzeit nicht als klonbares Wiki-Repository bereit; die Seiten sind deshalb versioniert und werden bei einer späteren Veröffentlichung ohne Inhaltsverlust übernommen.
 
+## Lizenz
+
+Integration und Add-on stehen unter der [GNU Affero General Public License v3.0](LICENSE) (`AGPL-3.0-only`).
+
 Solange dieses Repository privat ist, muss es für Tests lokal in `/config/custom_components/foto_upload` kopiert werden; HACS und der Add-on-Store können private GitHub-Repositories nicht allgemein abrufen. Die Container- und Hassfest-Prüfungen laufen trotzdem. Erst nach deiner bewussten Veröffentlichung wird zusätzlich die offizielle HACS-Prüfung aktiv.
