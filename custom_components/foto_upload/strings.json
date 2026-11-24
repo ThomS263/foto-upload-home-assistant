@@ -7,7 +7,10 @@
         "data": {"url": "Server URL"}
       }
     },
-    "error": {"cannot_connect": "The server is unavailable or returned an invalid response"},
+    "error": {
+      "cannot_connect": "The server is unavailable or returned an invalid response",
+      "invalid_url": "Enter a valid HTTP(S) server address without credentials, path, query, or fragment"
+    },
     "abort": {"already_configured": "This server is already configured"}
   }
 }
