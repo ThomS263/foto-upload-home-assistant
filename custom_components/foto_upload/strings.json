@@ -1,1 +1,13 @@
-{"config":{"step":{"user":{"title":"Foto-Upload verbinden","description":"Adresse des vorhandenen Servers oder des Home-Assistant-Add-ons.","data":{"url":"Serveradresse"}}},"error":{"cannot_connect":"Server nicht erreichbar oder Antwort ungültig"},"abort":{"already_configured":"Dieser Server ist bereits eingerichtet"}}}
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Foto-Upload",
+        "description": "Address of your existing Foto-Upload server or Home Assistant add-on.",
+        "data": {"url": "Server URL"}
+      }
+    },
+    "error": {"cannot_connect": "The server is unavailable or returned an invalid response"},
+    "abort": {"already_configured": "This server is already configured"}
+  }
+}

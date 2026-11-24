@@ -1,5 +1,7 @@
 # Foto-Upload für Home Assistant und HACS
 
+Home Assistant integration and add-on for the self-hosted [Foto-Upload server](https://github.com/ThomS263/foto_upload_offiziel). The integration monitors availability, storage, albums, uploads, backups and expired guest links. The optional add-on runs the complete server directly on Home Assistant OS or Supervised.
+
 Dieses Repository bietet zwei Wege:
 
 1. **Home-Assistant-Add-on statt CasaOS:** Der vollständige Foto-Upload-Server läuft direkt auf Home Assistant OS oder Supervised.
@@ -35,7 +37,7 @@ automation:
 
 [Foto-Upload-Server](https://github.com/ThomS263/foto_upload_offiziel) · [Android-App](https://github.com/ThomS263/foto_upload_offiziell_androidapp)
 
-Ausführliche Wiki-Dokumentation für die private Testphase liegt unter [`docs/`](docs/Home.md). GitHub stellt ein echtes Wiki für dieses private Repository derzeit nicht als klonbares Wiki-Repository bereit; die Seiten sind deshalb versioniert und werden bei einer späteren Veröffentlichung ohne Inhaltsverlust übernommen.
+Ausführliche Dokumentation liegt versioniert unter [`docs/`](docs/Home.md). Fehler und Funktionswünsche können über [GitHub Issues](https://github.com/ThomS263/foto_upload_offiziell_hacs/issues) gemeldet werden.
 
 ## Lizenz
 
