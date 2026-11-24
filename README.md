@@ -11,7 +11,7 @@ Dieses Repository bietet zwei Wege:
 
 Unter **Einstellungen → Add-ons → Add-on-Store → Repositories** diese Adresse eintragen:
 
-`https://github.com/ThomS263/foto_upload_offiziell_hacs`
+`https://github.com/ThomS263/foto_upload_home_assistant`
 
 Danach **Foto-Upload** installieren, starten und die Weboberfläche öffnen. Die Daten werden unter `/share/foto-upload` gespeichert. CasaOS wird dafür nicht benötigt.
 
@@ -37,7 +37,7 @@ automation:
 
 [Foto-Upload-Server](https://github.com/ThomS263/foto_upload_offiziel) · [Android-App](https://github.com/ThomS263/foto_upload_offiziell_androidapp)
 
-Ausführliche Dokumentation liegt versioniert unter [`docs/`](docs/Home.md). Fehler und Funktionswünsche können über [GitHub Issues](https://github.com/ThomS263/foto_upload_offiziell_hacs/issues) gemeldet werden.
+Ausführliche Dokumentation liegt versioniert unter [`docs/`](docs/Home.md). Fehler und Funktionswünsche können über [GitHub Issues](https://github.com/ThomS263/foto_upload_home_assistant/issues) gemeldet werden.
 
 ## Lizenz
 
