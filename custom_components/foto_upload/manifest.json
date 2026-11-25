@@ -1,6 +1,7 @@
 {
   "domain": "foto_upload",
   "name": "Foto-Upload",
+  "categories": ["other_ecosystems"],
   "codeowners": ["@ThomS263"],
   "config_flow": true,
   "documentation": "https://github.com/ThomS263/foto-upload-home-assistant",
