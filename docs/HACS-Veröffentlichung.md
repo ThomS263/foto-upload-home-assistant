@@ -10,4 +10,4 @@ Der öffentliche Veröffentlichungsablauf ist abgeschlossen. Diese Seite dokumen
 6. Einen GitHub-Release mit semantischer Version, Änderungen und Installationshinweisen erstellen.
 7. Erst nach erfolgreichem Praxistest eine Aufnahme in HACS beziehungsweise weitere Home-Assistant-Verzeichnisse beantragen.
 
-Die URL lautet: `https://github.com/ThomS263/foto_upload_home_assistant`.
+Die URL lautet: `https://github.com/ThomS263/foto-upload-home-assistant`.

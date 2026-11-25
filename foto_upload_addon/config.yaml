@@ -1,8 +1,8 @@
 name: Foto-Upload
-version: "3.5.1"
+version: "3.6.0"
 slug: foto_upload
 description: Private Foto- und Videoalben direkt auf Home Assistant betreiben
-url: https://github.com/ThomS263/foto_upload_home_assistant
+url: https://github.com/ThomS263/foto-upload-home-assistant
 arch: [amd64, aarch64]
 startup: services
 boot: auto

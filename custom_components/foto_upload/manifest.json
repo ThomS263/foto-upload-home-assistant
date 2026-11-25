@@ -3,9 +3,9 @@
   "name": "Foto-Upload",
   "codeowners": ["@ThomS263"],
   "config_flow": true,
-  "documentation": "https://github.com/ThomS263/foto_upload_home_assistant",
+  "documentation": "https://github.com/ThomS263/foto-upload-home-assistant",
   "integration_type": "service",
   "iot_class": "local_polling",
-  "issue_tracker": "https://github.com/ThomS263/foto_upload_home_assistant/issues",
-  "version": "1.4.1"
+  "issue_tracker": "https://github.com/ThomS263/foto-upload-home-assistant/issues",
+  "version": "1.5.0"
 }
