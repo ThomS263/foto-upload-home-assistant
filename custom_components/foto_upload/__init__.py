@@ -2,22 +2,29 @@ from __future__ import annotations
 
 from datetime import timedelta
 
-from homeassistant.const import CONF_URL, Platform
+from homeassistant.const import CONF_ACCESS_TOKEN, CONF_URL, Platform
+from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from .api import FotoUploadApi
+from .api import AuthenticationError, FotoUploadApi
 from .const import DOMAIN, SCAN_INTERVAL_SECONDS
 
 PLATFORMS = [Platform.SENSOR, Platform.BINARY_SENSOR]
 
 
 async def async_setup_entry(hass, entry):
-    api = FotoUploadApi(async_get_clientsession(hass), entry.data[CONF_URL])
+    if not entry.data.get(CONF_ACCESS_TOKEN):
+        raise ConfigEntryAuthFailed("Status-Token fehlt")
+    api = FotoUploadApi(
+        async_get_clientsession(hass), entry.data[CONF_URL], entry.data[CONF_ACCESS_TOKEN]
+    )
 
     async def update():
         try:
             return await api.status()
+        except AuthenticationError as error:
+            raise ConfigEntryAuthFailed(str(error)) from error
         except ConnectionError as error:
             raise UpdateFailed(str(error)) from error
 

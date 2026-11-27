@@ -6,7 +6,7 @@ Home Assistant integration and add-on for the self-hosted [Foto-Upload server](h
   <img src="custom_components/foto_upload/brand/icon.png" alt="Foto-Upload-Symbol" width="120">
 </p>
 
-**Aktueller Stand:** Integration **1.6.2**, Add-on/Server **3.7.0**. Das Repository ist öffentlich und über HACS installierbar.
+**Aktueller Stand:** Integration **1.7.0**, Add-on/Server **3.8.0**. Das Repository ist öffentlich und über HACS installierbar.
 
 Dieses Repository bietet zwei Wege:
 
@@ -26,7 +26,10 @@ Danach **Foto-Upload** installieren, starten und die Weboberfläche öffnen. Die
 1. In HACS nach **Foto-Upload** suchen und herunterladen.
 2. Home Assistant neu starten.
 3. Unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach **Foto-Upload** suchen.
-4. Die Basisadresse des Foto-Upload-Servers eintragen, zum Beispiel `http://192.168.1.20:8080`.
+4. Im Foto-Upload-Adminbereich unter **Sicherheit, Funnel & Updates** den Home-Assistant-Status-Token kopieren.
+5. Basisadresse und Status-Token eintragen, zum Beispiel `http://192.168.1.20:8080`.
+
+Der Status-Token erlaubt ausschließlich das Lesen der Überwachungswerte. Er gewährt keinen Zugriff auf Alben, Originaldateien oder Verwaltungsfunktionen. Wird er ungültig, fordert Home Assistant automatisch zur erneuten Eingabe auf.
 
 Die Integration erstellt Sensoren für Erreichbarkeit, Version, Dateien, aktive und archivierte Alben, freien Speicher, letzten Upload, letzte Sicherung, Sicherungszustand und abgelaufene Gästelinks. Neue Alben erscheinen dynamisch. Bei neuen Dateien wird außerdem das Ereignis `foto_upload_new_files` mit `count`, `total` und `entry_id` ausgelöst. Über die Geräteansicht führt ein Link direkt zur Serveroberfläche; Diagnoseinformationen stehen im Home-Assistant-Download bereit.
 

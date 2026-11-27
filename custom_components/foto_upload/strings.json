@@ -4,13 +4,22 @@
       "user": {
         "title": "Connect Foto-Upload",
         "description": "Address of your existing Foto-Upload server or Home Assistant add-on.",
-        "data": {"url": "Server URL"}
+        "data": {"url": "Server URL", "access_token": "Read-only status token"}
+      },
+      "reauth_confirm": {
+        "title": "Update authentication",
+        "description": "Copy the Home Assistant status token from Foto-Upload administration and enter it here.",
+        "data": {"access_token": "Read-only status token"}
       }
     },
     "error": {
       "cannot_connect": "The server is unavailable or returned an invalid response",
-      "invalid_url": "Enter a valid HTTP(S) server address without credentials, path, query, or fragment"
+      "invalid_url": "Enter a valid HTTP(S) server address without credentials, path, query, or fragment",
+      "invalid_auth": "The read-only status token was rejected"
     },
-    "abort": {"already_configured": "This server is already configured"}
+    "abort": {
+      "already_configured": "This server is already configured",
+      "reauth_successful": "Authentication updated successfully"
+    }
   }
 }

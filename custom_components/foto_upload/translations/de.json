@@ -1,1 +1,25 @@
-{"config":{"step":{"user":{"title":"Foto-Upload verbinden","description":"Adresse des vorhandenen Servers oder des Home-Assistant-Add-ons.","data":{"url":"Serveradresse"}}},"error":{"cannot_connect":"Server nicht erreichbar oder Antwort ungültig","invalid_url":"Gib eine gültige HTTP(S)-Serveradresse ohne Zugangsdaten, Pfad, Abfrage oder Fragment ein"},"abort":{"already_configured":"Dieser Server ist bereits eingerichtet"}}}
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Foto-Upload verbinden",
+        "description": "Adresse des vorhandenen Servers oder des Home-Assistant-Add-ons.",
+        "data": {"url": "Serveradresse", "access_token": "Nur-lesbarer Status-Token"}
+      },
+      "reauth_confirm": {
+        "title": "Anmeldung aktualisieren",
+        "description": "Kopiere den Home-Assistant-Status-Token aus der Foto-Upload-Verwaltung und füge ihn hier ein.",
+        "data": {"access_token": "Nur-lesbarer Status-Token"}
+      }
+    },
+    "error": {
+      "cannot_connect": "Server nicht erreichbar oder Antwort ungültig",
+      "invalid_url": "Gib eine gültige HTTP(S)-Serveradresse ohne Zugangsdaten, Pfad, Abfrage oder Fragment ein",
+      "invalid_auth": "Der nur-lesbare Status-Token wurde abgelehnt"
+    },
+    "abort": {
+      "already_configured": "Dieser Server ist bereits eingerichtet",
+      "reauth_successful": "Anmeldung erfolgreich aktualisiert"
+    }
+  }
+}
