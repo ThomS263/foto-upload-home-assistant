@@ -1,15 +1,20 @@
-# Private Testinstallation
+# Installation mit HACS
 
-## Integration manuell testen
+1. HACS öffnen und nach **Foto-Upload** suchen.
+2. Die Integration herunterladen und Home Assistant neu starten.
+3. **Einstellungen → Geräte & Dienste → Integration hinzufügen** öffnen.
+4. Nach **Foto-Upload** suchen und die Basisadresse des Servers eintragen.
 
-1. Dieses private Repository auf einen Computer mit Git-Zugriff klonen.
-2. Den Ordner `custom_components/foto_upload` nach `/config/custom_components/foto_upload` der Home-Assistant-Installation kopieren.
-3. Home Assistant vollständig neu starten.
-4. Unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach `Foto-Upload` suchen.
-5. Die vollständige Serveradresse eintragen, beispielsweise `http://192.168.1.20:8080`.
+Falls die Integration noch nicht im Standardkatalog angezeigt wird, kann dieses
+öffentliche Repository in HACS als benutzerdefiniertes Repository vom Typ
+**Integration** hinzugefügt werden:
 
-## Add-on privat testen
+`https://github.com/ThomS263/foto-upload-home-assistant`
 
-Ein privates GitHub-Repository lässt sich nicht allgemein als Add-on-Quelle eintragen. Für den Test den Ordner `foto_upload_addon` nach `/addons/foto_upload` kopieren, den Add-on-Store neu laden und das lokale Add-on installieren. Die Daten liegen anschließend unter `/share/foto-upload`.
+Für das Add-on unter **Einstellungen → Add-ons → Add-on-Store → Repositories**
+dieselbe öffentliche Repository-Adresse eintragen und anschließend
+**Foto-Upload** installieren.
 
-Vor jedem Update eine Kopie dieses Ordners erstellen. Für externe QR-Codes wird weiterhin eine eigene HTTPS-Adresse oder ein vorhandener Tunnel benötigt.
+Vor einem Add-on-Update empfiehlt sich eine Sicherung von `/share/foto-upload`.
+Für externe QR-Codes wird weiterhin eine eigene HTTPS-Adresse oder ein
+vorhandener Tunnel benötigt.

@@ -6,7 +6,7 @@ Home Assistant integration and add-on for the self-hosted [Foto-Upload server](h
   <img src="custom_components/foto_upload/brand/icon.png" alt="Foto-Upload-Symbol" width="120">
 </p>
 
-**Aktueller Stand:** Integration **1.6.1**, Add-on/Server **3.7.0**. Das Repository bleibt bis zum abgeschlossenen Praxistest privat.
+**Aktueller Stand:** Integration **1.6.2**, Add-on/Server **3.7.0**. Das Repository ist öffentlich und über HACS installierbar.
 
 Dieses Repository bietet zwei Wege:
 
@@ -23,7 +23,10 @@ Danach **Foto-Upload** installieren, starten und die Weboberfläche öffnen. Die
 
 ## HACS-Integration installieren
 
-In HACS dieses Repository als benutzerdefiniertes Repository vom Typ **Integration** hinzufügen. Home Assistant neu starten und anschließend unter **Geräte & Dienste → Integration hinzufügen → Foto-Upload** die Serveradresse eintragen.
+1. In HACS nach **Foto-Upload** suchen und herunterladen.
+2. Home Assistant neu starten.
+3. Unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach **Foto-Upload** suchen.
+4. Die Basisadresse des Foto-Upload-Servers eintragen, zum Beispiel `http://192.168.1.20:8080`.
 
 Die Integration erstellt Sensoren für Erreichbarkeit, Version, Dateien, aktive und archivierte Alben, freien Speicher, letzten Upload, letzte Sicherung, Sicherungszustand und abgelaufene Gästelinks. Neue Alben erscheinen dynamisch. Bei neuen Dateien wird außerdem das Ereignis `foto_upload_new_files` mit `count`, `total` und `entry_id` ausgelöst. Über die Geräteansicht führt ein Link direkt zur Serveroberfläche; Diagnoseinformationen stehen im Home-Assistant-Download bereit.
 
@@ -58,5 +61,3 @@ Die Home-Assistant-Integration selbst ergänzt Geräte, Sensoren, Diagnoseinform
 ## Lizenz
 
 Integration und Add-on stehen unter der [GNU Affero General Public License v3.0](LICENSE) (`AGPL-3.0-only`).
-
-Solange dieses Repository privat ist, muss es für Tests lokal in `/config/custom_components/foto_upload` kopiert werden; HACS und der Add-on-Store können private GitHub-Repositories nicht allgemein abrufen. Die Container- und Hassfest-Prüfungen laufen trotzdem. Erst nach deiner bewussten Veröffentlichung wird zusätzlich die offizielle HACS-Prüfung aktiv.
