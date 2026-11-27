@@ -6,7 +6,7 @@ Home Assistant integration and add-on for the self-hosted [Foto-Upload server](h
   <img src="custom_components/foto_upload/brand/icon.png" alt="Foto-Upload-Symbol" width="120">
 </p>
 
-**Aktueller Stand:** Integration **1.6.0**, Add-on/Server **3.7.0**. Das Repository bleibt bis zum abgeschlossenen Praxistest privat.
+**Aktueller Stand:** Integration **1.6.1**, Add-on/Server **3.7.0**. Das Repository bleibt bis zum abgeschlossenen Praxistest privat.
 
 Dieses Repository bietet zwei Wege:
 
