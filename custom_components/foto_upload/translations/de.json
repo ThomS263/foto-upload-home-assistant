@@ -3,12 +3,12 @@
     "step": {
       "user": {
         "title": "Foto-Upload verbinden",
-        "description": "Adresse des vorhandenen Servers oder des Home-Assistant-Add-ons.",
+        "description": "Trage Serveradresse und Home-Assistant-Status-Token aus Foto-Upload → Verwaltung → Sicherheit, Funnel & Updates ein. Verwende kein Admin- oder Albumpasswort und keinen GitHub-, HACS- oder Home-Assistant-Token.",
         "data": {"url": "Serveradresse", "access_token": "Nur-lesbarer Status-Token"}
       },
       "reauth_confirm": {
         "title": "Anmeldung aktualisieren",
-        "description": "Kopiere den Home-Assistant-Status-Token aus der Foto-Upload-Verwaltung und füge ihn hier ein.",
+        "description": "Kopiere den Home-Assistant-Status-Token unter Foto-Upload → Verwaltung → Sicherheit, Funnel & Updates. Verwende kein Admin- oder Albumpasswort.",
         "data": {"access_token": "Nur-lesbarer Status-Token"}
       }
     },

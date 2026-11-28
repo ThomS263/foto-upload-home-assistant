@@ -6,7 +6,7 @@ Home Assistant integration and add-on for the self-hosted [Foto-Upload server](h
   <img src="custom_components/foto_upload/brand/icon.png" alt="Foto-Upload-Symbol" width="120">
 </p>
 
-**Aktueller Stand:** Integration **1.7.0**, Add-on/Server **3.8.0**. Das Repository ist öffentlich und über HACS installierbar.
+**Aktueller Stand:** Integration **1.7.1**, Add-on/Server **3.8.0**. Das Repository ist öffentlich und über HACS installierbar.
 
 Dieses Repository bietet zwei Wege:
 
@@ -23,13 +23,33 @@ Danach **Foto-Upload** installieren, starten und die Weboberfläche öffnen. Die
 
 ## HACS-Integration installieren
 
-1. In HACS nach **Foto-Upload** suchen und herunterladen.
-2. Home Assistant neu starten.
-3. Unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach **Foto-Upload** suchen.
-4. Im Foto-Upload-Adminbereich unter **Sicherheit, Funnel & Updates** den Home-Assistant-Status-Token kopieren.
-5. Basisadresse und Status-Token eintragen, zum Beispiel `http://192.168.1.20:8080`.
+Beim Herunterladen in HACS wird **kein Token** benötigt. Der Token wird erst nach dem Neustart beim Einrichten der Integration abgefragt.
 
-Der Status-Token erlaubt ausschließlich das Lesen der Überwachungswerte. Er gewährt keinen Zugriff auf Alben, Originaldateien oder Verwaltungsfunktionen. Wird er ungültig, fordert Home Assistant automatisch zur erneuten Eingabe auf.
+1. In HACS nach **Foto-Upload** suchen und **Herunterladen** wählen.
+2. Home Assistant neu starten.
+3. Die Weboberfläche deines Foto-Upload-Servers öffnen und als Administrator anmelden.
+4. **Verwaltung → Sicherheit, Funnel & Updates** öffnen.
+5. Beim Feld **Home-Assistant-Status-Token** auf **Status-Token kopieren** drücken.
+6. In Home Assistant **Einstellungen → Geräte & Dienste → Integration hinzufügen → Foto-Upload** öffnen.
+7. Als Serveradresse die Adresse eintragen, unter der Home Assistant den Server erreicht, zum Beispiel `http://192.168.1.20:8080`.
+8. In **Nur-lesbarer Status-Token** den eben kopierten Home-Assistant-Status-Token einfügen.
+
+Verwende dort **nicht** das Adminpasswort, ein Albumpasswort, einen GitHub-Token, einen HACS-Token oder einen Home-Assistant-Zugriffstoken. Der richtige Schlüssel ist ausschließlich der automatisch erzeugte **Home-Assistant-Status-Token** aus der Foto-Upload-Verwaltung. Er erlaubt nur das Lesen der Überwachungswerte und keinen Zugriff auf Alben, Originaldateien oder Verwaltungsfunktionen.
+
+Der Status-Token ist erst ab Foto-Upload Server **3.8.0** verfügbar. Bei einer älteren Serverversion zuerst den Server beziehungsweise das Add-on aktualisieren.
+
+### Welche Serveradresse eintragen?
+
+- CasaOS im Heimnetz: `http://CASAOS-IP:8080`
+- Home-Assistant-Add-on: die im Add-on angezeigte lokale Adresse mit Port `8080`
+- Docker mit geändertem Port: `http://SERVER-IP:DEIN-PORT`
+- Extern nur über deine eigene HTTPS-Adresse, beispielsweise `https://fotos.example.org`
+
+Keine Unterseite wie `/admin`, `/health` oder `/event/...` anhängen.
+
+### Bestehende Integration aktualisieren
+
+Nach dem Update auf Server 3.8.0 kann Home Assistant **Erneute Authentifizierung erforderlich** anzeigen. Dann den Status-Token aus der Verwaltung kopieren und im angezeigten Dialog einfügen. Die Integration muss nicht gelöscht werden.
 
 Die Integration erstellt Sensoren für Erreichbarkeit, Version, Dateien, aktive und archivierte Alben, freien Speicher, letzten Upload, letzte Sicherung, Sicherungszustand und abgelaufene Gästelinks. Neue Alben erscheinen dynamisch. Bei neuen Dateien wird außerdem das Ereignis `foto_upload_new_files` mit `count`, `total` und `entry_id` ausgelöst. Über die Geräteansicht führt ein Link direkt zur Serveroberfläche; Diagnoseinformationen stehen im Home-Assistant-Download bereit.
 

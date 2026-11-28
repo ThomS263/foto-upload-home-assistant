@@ -3,12 +3,12 @@
     "step": {
       "user": {
         "title": "Connect Foto-Upload",
-        "description": "Address of your existing Foto-Upload server or Home Assistant add-on.",
+        "description": "Enter the server address and the Home Assistant status token from Foto-Upload Administration → Security, Funnel & updates. Do not use an administrator password, album password, GitHub token or Home Assistant access token.",
         "data": {"url": "Server URL", "access_token": "Read-only status token"}
       },
       "reauth_confirm": {
         "title": "Update authentication",
-        "description": "Copy the Home Assistant status token from Foto-Upload administration and enter it here.",
+        "description": "Copy the Home Assistant status token from Foto-Upload Administration → Security, Funnel & updates. Do not enter an administrator or album password.",
         "data": {"access_token": "Read-only status token"}
       }
     },

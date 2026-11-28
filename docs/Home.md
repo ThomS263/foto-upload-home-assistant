@@ -9,7 +9,7 @@ HACS, Hassfest, Python-Syntax und der Add-on-Container werden bei Änderungen au
 
 | Komponente | Version | Aufgabe |
 | --- | --- | --- |
-| HACS-Integration | 1.7.0 | Überwacht Server, Speicher, Alben, Uploads, Sicherungen und Freigabelinks |
+| HACS-Integration | 1.7.1 | Überwacht Server, Speicher, Alben, Uploads, Sicherungen und Freigabelinks |
 | Home-Assistant-Add-on | 3.8.0 | Betreibt den vollständigen Foto-Upload-Server auf Home Assistant OS/Supervised |
 
 Für die sichere Verbindung kopierst du in der Foto-Upload-Verwaltung unter **Sicherheit, Funnel & Updates** den nur lesbaren Home-Assistant-Status-Token. Home Assistant fragt bei einem ungültigen Schlüssel automatisch erneut danach.
