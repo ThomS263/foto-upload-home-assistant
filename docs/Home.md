@@ -17,6 +17,6 @@ Für die sichere Verbindung kopierst du in der Foto-Upload-Verwaltung unter **Si
 ![Mobile Add-on-Weboberfläche](images/addon-mobile.png)
 
 - [Installation mit HACS](Private-Testinstallation.md)
-- [HACS-Veröffentlichung](HACS-Veröffentlichung.md)
+- [Releases und Wartung](HACS-Veröffentlichung.md)
 - [Automationen](Automationen.md)
 - [Fehlerbehebung](Fehlerbehebung.md)

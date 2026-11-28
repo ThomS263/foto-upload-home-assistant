@@ -1,13 +1,15 @@
-# HACS und Add-on-Repository
+# Releases und Wartung
 
-Das Repository ist öffentlich und für die Aufnahme in den HACS-Katalog eingereicht.
+Foto-Upload ist im offiziellen HACS-Standardkatalog verfügbar. Nutzer installieren die Integration direkt über die HACS-Suche; ein benutzerdefiniertes Repository ist nicht erforderlich.
 
-1. Sicherstellen, dass keine Zugangsdaten, privaten URLs oder persönlichen Daten im Repository stehen.
-2. Das Repository muss **Public** bleiben.
-3. Den Workflow **Prüfen** erneut starten. HACS, Hassfest und Add-on-Container müssen grün sein.
-4. In HACS das öffentliche Repository als benutzerdefiniertes Repository vom Typ **Integration** hinzufügen und eine frische Installation testen.
-5. In Home Assistant unter **Add-on-Store → Repositories** dieselbe URL eintragen und das Add-on testen.
-6. Einen GitHub-Release mit semantischer Version, Änderungen und Installationshinweisen erstellen.
-7. Nach Änderungen einen neuen Release erstellen und bei der bestehenden HACS-Einreichung erneut eine Prüfung anfordern.
+## Neue Version veröffentlichen
 
-Die URL lautet: `https://github.com/ThomS263/foto-upload-home-assistant`.
+1. Versionsnummer in `custom_components/foto_upload/manifest.json` erhöhen.
+2. Deutsche und englische Texte sowie die Dokumentation aktualisieren.
+3. HACS-, Hassfest-, Add-on- und Sicherheitsprüfungen vollständig durchlaufen lassen.
+4. Einen GitHub-Release mit semantischer Versionsnummer und verständlichen Änderungen veröffentlichen.
+5. Nach einigen Stunden prüfen, ob HACS die neue Version anbietet.
+
+Das Add-on wird weiterhin über dieses Repository zum Home-Assistant-Add-on-Store hinzugefügt. Vor Server- oder Add-on-Updates sollte `/share/foto-upload` gesichert werden.
+
+Repository: `https://github.com/ThomS263/foto-upload-home-assistant`
